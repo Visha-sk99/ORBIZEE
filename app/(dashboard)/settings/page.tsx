@@ -1,11 +1,6 @@
 "use client";
 // Force clear institute config cache on settings save
-function clearInstituteCache() {
-  if (typeof window !== "undefined") {
-    // Trigger a soft reload of config by dispatching a custom event
-    window.dispatchEvent(new Event("instituteConfigUpdated"));
-  }
-}
+
 import { clearInstituteCache } from "@/hooks/useInstituteConfig";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
